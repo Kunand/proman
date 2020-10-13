@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}
+    Game of Thrones houses
+{% endblock %}
+{% block content %}
+    <div class="main-page-title" style="color: darkgray">
+    <h1>ProMan</h1>
+    {% if username %}
+        You are logged in as: {{ username }}
+    {% else %}
+        You are not logged in
+    {% endif %}
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="/registration">Register</a>
+            </li>
+            {% if username %}
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="/login">Login</a>
+                </li>
+            {% endif %}
+            <li>
+                <a href="#" class="create-board">Create board</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="boards">
+
+
+    </div>
+{% endblock %}
